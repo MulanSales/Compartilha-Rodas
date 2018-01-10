@@ -1,0 +1,31 @@
+
+body {
+	background-color: #66beb2;
+}
+
+.center-form {
+	width: 315px;
+	height: 400px;
+	margin: 10% auto;
+}
+
+.title-text {
+	color:	#53616c;
+	position: relative;
+	left: 95px;
+}
+
+input[type=text] {
+	background-color: #b2eee6;
+	border-style: inset;
+}
+
+input[type=submit] {
+	color: white;
+	background-color: #53616c;
+	position: relative;
+	height: 40px;
+	width: 150px;
+	top: 20px;
+	left: 65px;
+}
