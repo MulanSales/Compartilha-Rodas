@@ -4,7 +4,8 @@
   "description": "modelo de aplicativo para transporte",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/MulanSales/LuanMirandaSales_teste#readme",
   "dependencies": {
     "http-server": "^0.11.1"
+  },
+  "engines": {
+    "node" : "7.1.0"
   }
 }
