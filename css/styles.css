@@ -1,6 +1,6 @@
 
 body {
-	background-color: #00c5cd;
+	background-color: #003366;	
 }
 
 .center-form {
@@ -22,6 +22,21 @@ body {
 }
 
 input[type=text] {
+	background-color: #b2eee6;
+	border-style: inset;
+}
+
+input[type=number] {
+	background-color: #b2eee6;
+	border-style: inset;
+}
+
+select {
+	background-color: #b2eee6;
+	border-style: inset;
+}
+
+input[type=date] {
 	background-color: #b2eee6;
 	border-style: inset;
 }
@@ -58,4 +73,30 @@ input[type=submit] {
 
 .table-prop {
 	background-color: white;
+}
+
+.col-sm-10 {
+	margin-top: 20px;
+}
+
+label {
+	color: #f6eede;
+}
+
+.form-add {
+	background-color: #061751	;
+	border-style: double;
+}
+
+.form-btn {
+	right: 100px;
+}
+
+.title-g {
+	color: #ffde00;
+	font-family: arial;
+}
+
+.container-t1 {
+	border-style: dashed;
 }
