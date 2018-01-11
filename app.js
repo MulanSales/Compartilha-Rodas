@@ -5,6 +5,10 @@ angular.module('CompartilhaRodas',
 	'CompartilhaRodas.login',
 	'CompartilhaRodas.main_user',
 	'CompartilhaRodas.add_user',
+	'CompartilhaRodas.edit_user',
+	'CompartilhaRodas.main_driver',
+	'CompartilhaRodas.add_driver',
+	'CompartilhaRodas.edit_driver'
 
 	])
 	.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {

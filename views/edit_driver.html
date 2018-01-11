@@ -3,33 +3,47 @@
   <div class="container">
     <div class="row">     
       <div class="col-md-8">
-        <h3 class="title-g"><i class="ion-android-note"></i> Editar - Passageiro</h3>
+        <h3 class="title-g"><i class="ion-android-note"></i> Editar - motorista</h3>
       </div>
     </div>
 
     <div class="clearfix"></div>
 
-    <form class="form-horizontal form-add" ng-submit="editPassageiro(passageiro.$id)">
+    <form class="form-horizontal form-add" ng-submit="editMotorista(motorista.$id)">
       <div class="form-group">
 
         <div class="col-sm-10">
           <label class="control-label col-sm-2">Nome:</label>
-          <input type="text" ng-model="passageiro.name" required>
+          <input type="text" ng-model="motorista.name" required>
         </div>
 
         <div class="col-sm-10">
           <label class="control-label col-sm-2">Data de Nascimento:</label>
-          <input type="text" ng-model="passageiro.date_birth" required>
+          <input type="text" ng-model="motorista.date_birth" required>
         </div>
 
         <div class="col-sm-10">
           <label class="control-label col-sm-2">CPF:</label>
-          <input type="number" ng-model="passageiro.cpf" required>
+          <input type="number" ng-model="motorista.cpf" required>
         </div>
 
         <div class="col-sm-10">
+          <label class="control-label col-sm-2">Modelo do Carro:</label>
+          <input type="text" ng-model="motorista.car_model" required>
+        </div>
+
+        <div class="col-sm-10">
+          <label class="control-label col-sm-2">Status:</label>
+          <select required ng-model="motorista.status">
+            <option value='ativo'>Ativo</option>
+            <option value='inativo'>Inativo</option>
+          </select>
+        </div>
+
+
+        <div class="col-sm-10">
           <label class="control-label col-sm-2">Sexo:</label>
-          <select required ng-model="passageiro.gender">
+          <select required ng-model="motorista.gender">
             <option value='masculino'>Masculino </option>
             <option value='feminino'>Feminino </option>
           </select>
@@ -39,7 +53,7 @@
       <div class="form-group"> 
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" class="btn btn-success">Atualizar</button>
-          <a class="btn btn-info" href="#!/main_user">Cancelar</a>
+          <a class="btn btn-info" href="#!/main_driver">Cancelar</a>
         </div>
       </div>
     </form>

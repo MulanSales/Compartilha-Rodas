@@ -1,0 +1,43 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-3">
+      <h2 class="title-g"><i class="ion-person-stalker"></i> Lista de Motoristas</h2>
+    </div>
+    <div class="col-md-5">
+      <h4 class="title-g">Procurar: <input type="text" ng-model="search"> <i class="ion-ios7-search"></i></h4>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-prop">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Data de Nascimento</th>
+          <th>CPF</th>
+          <th>Modelo de Carro</th>
+          <th>Status</th>
+          <th>Sexo</th>
+          <th width=200 >Funções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="motorista in data | filter:search">
+          <td style="font-family:times"><i class="ion-ios7-person-outline"></i> 
+            {{motorista.name}}
+            <th>{{motorista.date_birth}}</th>
+            <th>{{motorista.cpf}}</th>
+            <th>{{motorista.car_model}}</th>
+            <th>{{motorista.status}}</th>
+            <th>{{motorista.gender}}</th>
+          </td>
+          <td> 
+              <a href="#!/edit_driver/{{motorista.$id}}" class="btn btn-info">Editar</a> 
+              <a href="" ng-click="deleteMotorista(motorista)" class="btn btn-danger">Deletar</a> 
+          </td>
+        </tr>
+        <a href="#!/add_driver" class="btn btn-success"><i class="ion-android-add-contact"></i> Adicionar Novo Motoristas</a>
+      </tbody>
+    </table>
+    <a class="btn btn-primary" href="#!/home">Voltar</a>
+</div>
