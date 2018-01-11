@@ -1,0 +1,22 @@
+{
+  "name": "compartilha-rodas",
+  "version": "1.0.0",
+  "description": "modelo de aplicativo para transporte",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MulanSales/LuanMirandaSales_teste.git"
+  },
+  "author": "Luan Miranda Sales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MulanSales/LuanMirandaSales_teste/issues"
+  },
+  "homepage": "https://github.com/MulanSales/LuanMirandaSales_teste#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
