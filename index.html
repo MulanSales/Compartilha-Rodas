@@ -2,7 +2,7 @@
 <html ng-app="CompartilhaRodas">
   <head>
     <meta charset="utf-8">
-    <title>Compartilha Rodas - Let's Go!</title>
+    <title>Compartilha Rodas</title>
     <meta name ="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/paper/bootstrap.min.css">
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
@@ -11,16 +11,33 @@
 
   <body>
 
-  	<div ng-view></div>
+    <div ng-view></div>
 
   	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
+	  <script src="bower_components/angular-route/angular-route.js"></script>
   	<script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
   	<script src="app.js"></script>
 
   	<!-- Controllers -->
   	<script src="controllers/login.js"></script>
-  	<scrip src="controllers/home.js"></script>	
+  	<script src="controllers/home.js"></script>
+    <script src ="controllers/main_user.js"></script>
+    <script src ="controllers/add_user.js"></script>
+
+    <script>
+    // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyDLwHdtMkLLbBEBMUfICJSPKusZ-RSkn8E",
+      authDomain: "compartilharodas.firebaseapp.com",
+      databaseURL: "https://compartilharodas.firebaseio.com",
+      projectId: "compartilharodas",
+      storageBucket: "compartilharodas.appspot.com",
+      messagingSenderId: "913581773308"
+      };
+      firebase.initializeApp(config);
+    </script>	
 
   </body>
 </html>

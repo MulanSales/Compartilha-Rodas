@@ -1,12 +1,18 @@
 
 body {
-	background-color: #1689b9;
+	background-color: #00c5cd;
 }
 
 .center-form {
 	width: 315px;
 	height: 400px;
 	margin: 10% auto;
+}
+
+.single-menu-text {
+	color: #ffde00;
+	margin-left: 65px;
+	margin-bottom: 40px;
 }
 
 .title-text {
@@ -28,4 +34,28 @@ input[type=submit] {
 	width: 150px;
 	top: 20px;
 	left: 65px;
+}
+
+.header {
+	text-decoration-color: white;
+	background-color: #061751;
+	padding: 15px;
+	text-align: center;
+}
+
+.header-bt {
+	text-decoration-color: white;
+	background-color: #061751;
+	padding: 15px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.header-text {
+	color: #ffde00;
+	font-family: times;
+}
+
+.table-prop {
+	background-color: white;
 }
