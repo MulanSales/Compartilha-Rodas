@@ -21,7 +21,7 @@
 	    <h3 class="page-header text-center header-text"><i class="ion-android-contact"> Motorista</i>
 	    </h3>
 	    <div class="text-center">
-	        <a class="btn btn-success" href="#!main_driver"><i class="ion-android-user-menu"></i> Gerenciar Motoristas</a>
+	        <a class="btn btn-success" href="#!main_driver"><i class="ion-android-user-menu"></i> Gerenciar corridas</a>
 	    </div>
 	    <br/>
 	</article>
@@ -30,8 +30,40 @@
 	    <h3 class="page-header text-center header-text"><i class="ion-android-contact"> Corrida</i>
 	    </h3>
 	    <div class="text-center">
-	        <a class="btn btn-success" href="addUser"><i class="ion-android-user-menu"></i> Gerenciar Corridas</a>
+	        <a class="btn btn-success" href="#!main_race"><i class="ion-android-user-menu"></i> Gerenciar Corridas</a>
 	    </div>
 	    <br/>
 	</article>
+
+	<div class="container">
+	  
+	  <div class="row">
+	    <div class="col-md-3">
+	      <h4 class="title-g"><i class="ion-looping"></i> Corridas Correntes</h4>
+	    </div>
+
+	  <table class="table table-bordered table-prop">
+	      <thead>
+	        <tr>
+	          <th>Nome - Cliente</th>
+	          <th>CPF - Cliente</th>
+	          <th>Nome - Motorista</th>
+	          <th>CPF - Motorista</th>
+	          <th>Valor</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr ng-repeat="corrida in data | limitTo: 4 ">
+	          <td style="font-family:times"><i class="ion-ios7-person-outline"></i> 
+	           {{corrida.user_name}}
+	            <th>{{corrida.user_cpf}}</th>
+	            <th>{{corrida.driver_name}}</th>
+	            <th>{{corrida.driver_cpf}}</th>
+	            <th>{{corrida.value}}</th>
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+	</div>
+
 </body>

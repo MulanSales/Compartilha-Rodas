@@ -1,5 +1,6 @@
 
 body {
+	background-image: url("https://i.ytimg.com/vi/Afj-Eu0zTeA/maxresdefault.jpg");
 	background-color: #003366;	
 }
 
@@ -93,7 +94,7 @@ label {
 }
 
 .title-g {
-	color: #ffde00;
+	color: black;
 	font-family: arial;
 }
 

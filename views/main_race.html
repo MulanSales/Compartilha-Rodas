@@ -1,0 +1,41 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-3">
+      <h2 class="title-g"><i class="ion-android-data"></i> Corridas</h2>
+    </div>
+    <div class="col-md-5">
+      <h4 class="title-g">Procurar: <input type="text" ng-model="search"> <i class="ion-ios7-search"></i></h4>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-prop">
+      <thead>
+        <tr>
+          <th>Nome - Cliente</th>
+          <th>CPF - Cliente</th>
+          <th>Nome - Motorista</th>
+          <th>CPF - Motorista</th>
+          <th>Valor</th>
+          <th width=200 >Funções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="corrida in data | filter:search">
+          <td style="font-family:times"><i class="ion-ios7-person-outline"></i> 
+            {{corrida.user_name}}
+            <th>{{corrida.user_cpf}}</th>
+            <th>{{corrida.driver_name}}</th>
+            <th>{{corrida.driver_cpf}}</th>
+            <th>{{corrida.value}}</th>
+
+          </td>
+          <td> 
+              <a href="" ng-click="deleteCorrida(corrida)" class="btn btn-danger">Deletar</a> 
+          </td>
+        </tr>
+        <a href="#!/add_race" class="btn btn-success"><i class="ion-android-add-contact"></i> Nova Corrida</a>
+      </tbody>
+    </table>
+    <a class="btn btn-primary" href="#!/home">Voltar</a>
+</div>
