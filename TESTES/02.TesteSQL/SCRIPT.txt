@@ -1,0 +1,40 @@
+﻿==============================================
+SCRIPT - Usado nos testes
+==============================================
+
+CREATE TABLE tb_customer(
+    id_customer INTEGER NOT NULL,
+    cpf_cnpj NUMERIC(14,2) NOT NULL,
+    nm_customer VARCHAR(30) NOT NULL,
+    PRIMARY KEY (id_customer)
+);
+
+CREATE TABLE dm_address_type(
+    cd_address_type VARCHAR(1) NOT NULL,
+    ds_address_type VARCHAR(20) NOT NULL,
+    PRIMARY KEY(cd_address_type)
+);
+
+CREATE TABLE tb_customer_address(
+   id_customer INTEGER NOT NULL REFERENCES tb_customer,
+   cd_address_type VARCHAR(1) NOT NULL REFERENCES dm_address_type,
+   street VARCHAR(30) NOT NULL,
+   lot INTEGER NOT NULL,
+   reference VARCHAR(30),
+   zip_code VARCHAR(15),
+   PRIMARY KEY (id_customer, cd_address_type)
+);
+
+INSERT INTO dm_address_type(cd_address_type, ds_address_type) VALUES ('R', 'Residêncial');
+
+INSERT INTO dm_address_type(cd_address_type, ds_address_type) VALUES ('C', 'Comercial');
+
+INSERT INTO dm_address_type(cd_address_type, ds_address_type) VALUES ('O', 'Outros');
+
+CREATE SEQUENCE PUBLIC.tb_customer_id_customer_seq OWNED BY PUBLIC.tb_customer.id_customer;
+
+INSERT INTO tb_customer VALUES (nextval('tb_customer_id_customer_seq'), 888777666.55, 'Joãozinho Silva');
+
+INSERT INTO tb_customer_address VALUES(currval('tb_customer_id_customer_seq'), 'R', 'Rua das Flores', 1, null, '01234-567');
+
+INSERT INTO tb_customer_address VALUES(currval('tb_customer_id_customer_seq'), 'C', 'Rua das Pedras', 100, 'Conjunto 200', '01234-567');
