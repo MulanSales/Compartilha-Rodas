@@ -1,0 +1,99 @@
+<div class="container">
+
+  <h5 class="title-g">Procurar: <input type="text" ng-model="search">
+   <i class="ion-ios7-search"></i>
+  </h5>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h5 class="title-g"><i class="ion-person-stalker"></i> Lista de Motoristas</h5>
+        <table class="table table-bordered table-prop">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Status</th>
+          <th>Funções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="motorista in drivers | filter:search ">
+          <td style="font-family:times"><i class="ion-ios7-person-outline"></i> 
+            {{motorista.name}}
+            <th>{{motorista.cpf}}</th>
+            <th>{{motorista.status}}</th>
+          </td>
+          <td> 
+            <a class="btn btn-success" ng-click="selectDriver(motorista.$id)">+</a> 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="col-md-4">
+      <h5 class="title-g"><i class="ion-person-stalker"></i> Lista de Usuários</h5>
+
+    <table class="table table-bordered table-prop">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Funções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="passageiro in users | filter: search">
+            <td style="font-family:times"><i class="ion-ios7-person-outline"></i> 
+              {{passageiro.name}}
+              <th>{{passageiro.cpf}}</th>
+            </td>
+            <td> 
+                <a class="btn btn-success" ng-click="selectUser(passageiro.$id)">+</a>
+            </td>
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+
+    <div class="col-md-4">
+      <h5 class="title-g"><i class="ion-plus-circled"></i> Nova Corrida</h5>
+    </div>   
+
+    <form ng-submit="addCorrida()">
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h3 class="panel-title">Dados da Corrida</h3>
+          </div>
+          <div class="panel-body">
+            Nome - Cliente: <input type="text" value="{{p.name}}" disabled required>
+          </div>
+          <div class="panel-footer">
+            CPF - Cliente: <input type="text" value="{{p.cpf}}" disabled required>
+          </div>
+          <div class="panel-body">
+            Nome - Motorista: <input type="text" value="{{m.name}}" disabled required>
+          </div>
+          <div class="panel-footer">
+            CPF - Motorista: <input type="text" value="{{m.cpf}}" disabled required>
+          </div>
+          <div class="panel-footer">
+            Status - Motorista: <input type="text" value="{{m.status}}" disabled required>
+          </div>
+          <div class="panel-body">
+            <b class="ion-card"> Valor:</b> <input type="numeric" ng-model="corrida.value" required>
+          </div>
+          <div class="panel-body">
+            <div ng-if="!selectedUser || !selectedDriver">
+              <button type="submit" class="btn btn-success disabled"><i class="ion-checkmark-round"></i> Registrar</button>
+            </div>  
+            <div ng-if="selectedUser && selectedDriver">
+                <button type="submit" class="btn btn-success enabled" ng-click="checkStatus(m.status)"><i class="ion-checkmark-round"></i> Registrar</button>
+            </div>            
+          </div>
+        </div>
+    </div>
+  </form>    
+  </div>
+</div>
